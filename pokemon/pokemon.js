@@ -1,3 +1,4 @@
+const get = require('lodash/get');
 const graphql = require('graphql');
 const client = require('./pokemon.client');
 
@@ -28,6 +29,9 @@ module.exports = {
     }
   },
   resolve: (root, args) => {
-    return client.getPokemon(args.id);
+    if(get(args, 'id')) {
+      return client.getPokemon(args.id);
+    }
+    return client.getPokemons();
   }
 };

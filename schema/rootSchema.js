@@ -5,7 +5,11 @@ const schema = new graphql.GraphQLSchema({
   query: new graphql.GraphQLObjectType({
     name: 'Query',
     fields: {
-      pokemon: pokemonType
+      pokemon: pokemonType,
+      pokemons: {
+	type: new graphql.GraphQLList(pokemonType.type),
+	resolve: pokemonType.resolve
+      }
     }
   })
 });
