@@ -1,0 +1,2 @@
+* Pokedex via GraphQL
+Following along at https://medium.com/@FdMstri/build-a-graphql-server-and-catch-em-all-af7a8f3bc111
