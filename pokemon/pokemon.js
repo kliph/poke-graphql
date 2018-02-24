@@ -1,4 +1,5 @@
-const graphql = require ('graphql');
+const graphql = require('graphql');
+const client = require('./pokemon.client');
 
 const pokemonType = new graphql.GraphQLObjectType({
   name: 'PokemonType',
@@ -27,13 +28,6 @@ module.exports = {
     }
   },
   resolve: (root, args) => {
-    return {
-      id: '1',
-      name: 'bulbasaur',
-      order: 1,
-      sprites: {
-	front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png'
-      }
-    };
+    return client.getPokemon(args.id);
   }
 };
