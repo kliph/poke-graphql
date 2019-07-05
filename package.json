@@ -2,6 +2,9 @@
   "scripts": {
     "test": "jest schema/**/*.spec.js"
   },
+  "jest": {
+    "testURL": "http://localhost"
+  },
   "dependencies": {
     "bluebird": "^3.5.1",
     "express": "^4.16.2",
