@@ -10,9 +10,12 @@
     "express": "^4.16.2",
     "express-graphql": "^0.6.12",
     "graphql": "^0.13.1",
-    "jest": "^22.4.2",
     "lodash": "^4.17.5",
     "request": "^2.83.0",
     "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0",
+    "mem": "^5.1.1"
   }
 }
